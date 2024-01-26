@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&family=Roboto&display=swap');
+
+main {
+    height: calc(100vh - 90px);
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.img-left {
+    height: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.img-left img {
+    height: 100%;
+    width: 100%;
+}
+
+.info-merienda {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color2);
+    color: var(--color4);
+    display: grid;
+    place-items: center;
+}
+
+.info {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.info-merienda h1 {
+    font-size: 5.5em;
+    text-align: center;
+
+}
+
+.info-merienda p {
+    font-size: 1.8em;
+    text-align: center;
+}
+
+.info-merienda button {
+    border: 1px solid black;
+    font-size: 1.6em;
+    background-color: var(--color4);
+    padding: 10px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+}
