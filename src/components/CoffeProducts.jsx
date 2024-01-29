@@ -8,7 +8,7 @@ export function CoffeProducts ( {products} ) {
     } 
 
     return (
-        <section className="coffe-products">
+        <section id='coffe-products' className="coffe-products">
             <div className="coffe-products-container">
             {
                 products.map(product => {

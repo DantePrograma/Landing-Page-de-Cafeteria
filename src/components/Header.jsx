@@ -6,7 +6,7 @@ export function Header () {
         <header>
             <nav className='nav-list'>
                     <a href="#">NOSOTROS</a>
-                    <a href="#coffe-section">PRODUCTOS</a>
+                    <a href="#coffe-products">PRODUCTOS</a>
                     <div className="logo">
                         ZE
                         <img src="src/imagenes/lamaquina.svg" alt="icono-empresa" />

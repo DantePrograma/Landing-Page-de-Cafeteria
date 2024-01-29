@@ -7,20 +7,22 @@ function CartItem ( {imagen, title, quantity, price, addToCart} ) {
         <>
                 <li>
                     <img src={imagen} alt={title} />
+                    <div className="quantity-section">
+                        <div className="quantity">
+                            <p>CANTIDAD: <strong>{quantity}</strong></p>
+                            <button onClick={addToCart}>+</button>
+                        </div>
+                        <strong>${price} ARS</strong>
+                    </div>
+                
                 </li>
-                <li>
-                    Qty: {quantity}
-                </li>
-                <button onClick={addToCart}>+</button>
-                <p>${price} ARS</p>
-    
         </>
         )
 }
 
 export function Cart () {
     const cartCheckBoxId = useId()
-    const { cart, clearCart, addToCart } = useCart()
+    const { cart, clearCart, addToCart, removeFromCart } = useCart()
     return (
         <>
           <label className="cart-button" htmlFor={cartCheckBoxId}>
@@ -41,14 +43,15 @@ export function Cart () {
                         />
                     ))
                 }
+                
+                
+                </ul>
                 <div className="cart-clear-container">
                    <button onClick={clearCart}>
                      <i class="bi bi-cart-x"></i>
                    </button>
                    <p>LIMPIAR CARRITO</p>
                 </div>
-                
-                </ul>
            </aside>
     
     

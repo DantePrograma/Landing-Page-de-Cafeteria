@@ -27,6 +27,13 @@
         "description": "Embárcate en un viaje sensorial con nuestro café francés de la más alta calidad.",
         "price": 9.999,
         "imagen": "src/imagenes/cafedefrancia.jpeg"
+    },
+    {
+        "id": 5,
+        "title": "Cafe Portugues",
+        "description": "Descubre Portugal en cada sorbo con nuestro Café Premium: auténtico, tostado a la perfección y lleno de sabor lisboeta.",
+        "price": 8.999,
+        "imagen": "src/imagenes/cafeportugues.jpeg"
     }
 ]
 }

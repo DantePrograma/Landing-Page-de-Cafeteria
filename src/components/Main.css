@@ -47,11 +47,17 @@ main {
     text-align: center;
 }
 
-.info-merienda button {
-    border: 1px solid black;
-    font-size: 1.6em;
-    background-color: var(--color4);
-    padding: 10px 25px;
-    border-radius: 5px;
-    cursor: pointer;
+
+@media  (max-width:900px ) {
+    main {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
+    .info-merienda h1 {
+        font-size: 3.9em;
+    }
+    
+    .info-merienda p {
+        font-size: 1.3em;
+    }
 }
