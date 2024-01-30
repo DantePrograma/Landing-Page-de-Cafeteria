@@ -2,7 +2,7 @@ import { useId } from 'react'
 import './Cart.css'
 import { useCart } from '../hooks/useCart'
 
-function CartItem ( {imagen, title, quantity, price, addToCart} ) {
+function CartItem ( {imagen, title, quantity, price, addToCart, key} ) {
     return (
         <>
                 <li>

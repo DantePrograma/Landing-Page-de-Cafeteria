@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Cart } from './Cart'
 import { HamburguerMenu } from './HamburguerMenu'
 import styled from 'styled-components'
+import logo from '/src/imagenes/lamaquina.svg'
 
 export function Header () {
     const [clicked, setClicked] = useState(false)
@@ -19,7 +20,7 @@ export function Header () {
         <NavBar>
         <div className="logo">
                         ZE
-                        <img src="../../src/imagenes/lamaquina.svg" alt="icono-empresa" />
+                        <img src={logo} alt="icono-empresa" />
                         US
         </div>
         <nav className={`nav-list ${clicked ? 'active' : ''}`}>

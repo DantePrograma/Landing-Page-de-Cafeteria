@@ -1,10 +1,11 @@
 import './Main.css'
+import merienda from "/src/imagenes/tazadecafenuevo.jpeg"
 
 export function Main () {
     return (
         <main>
             <div className="img-left">
-            <img src="src/imagenes/tazadecafenuevo.jpeg" alt="taza de cafe" />
+            <img src={merienda} alt="taza de cafe" />
             </div>
             <div className="info-merienda">
                 <div className="info">
