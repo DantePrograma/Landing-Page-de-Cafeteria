@@ -48,7 +48,7 @@ export function Cart () {
                 </ul>
                 <div className="cart-clear-container">
                    <button onClick={clearCart}>
-                     <i class="bi bi-cart-x"></i>
+                     <i className="bi bi-cart-x"></i>
                    </button>
                    <p>LIMPIAR CARRITO</p>
                 </div>

@@ -2,10 +2,10 @@
 
 .cart {
     background: #fff;
-    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%);
+    clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
     padding: 40px;
     position: fixed;
-    right: 0px;
+    left: 0px;
     top: 0px;
     width: 300px;
     color: var(--color2);
@@ -74,16 +74,18 @@
   
   
   .cart-button {
-    align-items: center;
+    position: relative;
     cursor: pointer;
     display: flex;
+    align-items: center;
     height: 32px;
     justify-content: center;
-    padding: 4px;
     transition: all .3s ease;
     width: 32px;
     z-index: 9999;
   }
+
+  
   
   .cart-button:hover {
     scale: 1.2;
@@ -108,7 +110,7 @@
   }
 
   i {
-    font-size: 20px;
+    font-size: 24px;
     color: var(--color2);
   }
 

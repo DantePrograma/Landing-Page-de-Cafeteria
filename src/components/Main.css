@@ -54,10 +54,10 @@ main {
         grid-template-rows: 1fr 1fr;
     }
     .info-merienda h1 {
-        font-size: 3.9em;
+        font-size: 2.5em;
     }
     
     .info-merienda p {
-        font-size: 1.3em;
+        font-size: .9em;
     }
 }
