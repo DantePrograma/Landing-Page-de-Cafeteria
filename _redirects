@@ -1,0 +1,5 @@
+# Redirige todas las solicitudes de imágenes a la carpeta de imágenes
+/images/* /images/:splat 200
+
+# Redirige todas las demás solicitudes a index.html
+/* /index.html 200

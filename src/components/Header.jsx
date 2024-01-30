@@ -20,7 +20,7 @@ export function Header () {
         <NavBar>
         <div className="logo">
                         ZE
-                        <img src="../src/imagenes/lamaquina.svg" alt="icono-empresa" />
+                        <img src="../../src/imagenes/lamaquina.svg" alt="icono-empresa" />
                         US
         </div>
         <nav className={`nav-list ${clicked ? 'active' : ''}`}>
