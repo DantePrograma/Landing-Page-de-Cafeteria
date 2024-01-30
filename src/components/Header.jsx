@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import { Cart } from './Cart'
 import { HamburguerMenu } from './HamburguerMenu'
-import './Header.css'
 import styled from 'styled-components'
 
 export function Header () {
