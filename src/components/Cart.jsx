@@ -1,8 +1,8 @@
-import { useId } from 'react'
+import { useId, useRef } from 'react'
 import './Cart.css'
 import { useCart } from '../hooks/useCart'
 
-function CartItem ( {imagen, title, quantity, price, addToCart, key} ) {
+function CartItem ( {imagen, title, quantity, price, addToCart} ) {
     return (
         <>
                 <li>
@@ -22,7 +22,8 @@ function CartItem ( {imagen, title, quantity, price, addToCart, key} ) {
 
 export function Cart () {
     const cartCheckBoxId = useId()
-    const { cart, clearCart, addToCart, removeFromCart } = useCart()
+    const { cart, clearCart, addToCart, cartVacio } = useCart()
+    
     return (
         <>
           <label className="cart-button" htmlFor={cartCheckBoxId}>
@@ -33,7 +34,15 @@ export function Cart () {
     
            <aside className="cart">
             <ul>
-            <h1 className='cart-h1'>Carrito</h1>
+                <div className="title-close-cart">
+                <h1>Carrito</h1>
+                <label className='close-cart-button' htmlFor={cartCheckBoxId}>
+                <i className="bi bi-x-lg"></i>
+                <p>Cerrar</p>
+                </label>
+                <input type="checkbox" id={cartCheckBoxId} hidden/>
+                </div>
+            
                 {
                     cart.map(product => (
                         <CartItem 
@@ -46,12 +55,21 @@ export function Cart () {
                 
                 
                 </ul>
+                {
+                cartVacio ?
                 <div className="cart-clear-container">
-                   <button onClick={clearCart}>
-                     <i className="bi bi-cart-x"></i>
-                   </button>
-                   <p>LIMPIAR CARRITO</p>
+                    <button onClick={clearCart}>
+                    <i className="bi bi-cart-x"></i>
+                </button>
+                    <p>LIMPIAR CARRITO</p>
                 </div>
+                : 
+                <div className="cart-vacio">
+                    <i class="bi bi-cart-x"></i>
+                    <p>No hay productos en el carrito</p>
+                </div>
+                }
+                
            </aside>
     
     

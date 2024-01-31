@@ -5,6 +5,7 @@ export const CartContext = createContext()
 
 export function CartProvider ( {children} ) {
     const [cart, setCart] = useState([])
+    const [cartVacio, setCartVacio] = useState(false)
 
     const addToCart = product => {
         const producInCartIndex = cart.findIndex(item => item.id === product.id)
@@ -23,9 +24,11 @@ export function CartProvider ( {children} ) {
                 quantity: 1
             }
         ]))
+        setCartVacio(true)
     }
     const clearCart = () => {
         setCart([])
+        setCartVacio(false)
     }
 
     const removeFromCart = product => {
@@ -37,7 +40,8 @@ export function CartProvider ( {children} ) {
             cart,
             addToCart,
             clearCart,
-            removeFromCart
+            removeFromCart,
+            cartVacio
         }}
         > 
             {children}

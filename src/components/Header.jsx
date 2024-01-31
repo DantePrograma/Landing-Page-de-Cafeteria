@@ -4,39 +4,42 @@ import { HamburguerMenu } from './HamburguerMenu'
 import styled from 'styled-components'
 import logo from '/src/imagenes/lamaquina.svg'
 
-export function Header () {
-    const [clicked, setClicked] = useState(false)
-
-    const handleClick = () => {
-        const isMobile = window.innerWidth <= 850;
-        if (isMobile) {
-            setClicked(!clicked);
-        }
-    }
+export function Header ( {clicked, handleClick }) {
+    
 
     
     return (
         <>
         <NavBar>
+            <div className="header-container">
+        <div className="burguer-button">
+                        <HamburguerMenu clicked={clicked} handleClick={handleClick} />
+        </div>
         <div className="logo">
                         ZE
                         <img src={logo} alt="icono-empresa" />
                         US
-        </div>
+                    </div>
+        
         <nav className={`nav-list ${clicked ? 'active' : ''}`}>
-            .
                     <a onClick={handleClick} href="#">NOSOTROS</a>
                     <a onClick={handleClick} href="#coffe-products">PRODUCTOS</a>
+                    
                     <a onClick={handleClick} href="#">CAFE</a>
                     <a onClick={handleClick} href="#">OPINIONES</a>
+                    
                     <div>
-                        <Cart />
                     </div>
                     
             </nav>
-            <div className="burguer-button">
-                        <HamburguerMenu clicked={clicked} handleClick={handleClick} />
-                    </div>
+            <div className="nashe">
+            <div >
+                <i className="bi bi-person"></i>
+            </div>
+            <Cart handleClick={handleClick} />
+            </div>
+            </div>
+            
         </NavBar>
 
 
@@ -47,12 +50,10 @@ export function Header () {
 
 const NavBar = styled.header`
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&family=Roboto&display=swap');
-    background-color: var(--color5);
+    background-color: white;
     width: 100%;
+    margin: 0 auto;
     height: 90px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     -webkit-box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
     -moz-box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
     box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
@@ -62,6 +63,20 @@ const NavBar = styled.header`
         padding: 0px 8px;
     }
 
+.header-container {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    
+    justify-content: space-between;
+}
+
+.nashe {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
 
 .nav-list {
     display: none;
@@ -82,9 +97,9 @@ const NavBar = styled.header`
     flex-direction: column-reverse;
     align-items: center;
     justify-content: space-between;
-    position: absolute;
+    position: fixed;
     top: 0;
-    right: 0;
+    left: 0;
     bottom: 0;
     color: white;
     background-color: white;
@@ -131,6 +146,7 @@ const NavBar = styled.header`
     font-family: 'Noto Sans', sans-serif;
     font-weight: 500;
     color: var(--color2);
+    margin-right: 30px;
 }
 
 .logo img {
@@ -140,6 +156,16 @@ const NavBar = styled.header`
     width: 70px;
     height: 70px;
   }
+}
+
+.burguer-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bi-person {
+    font-size: 24px;
 }
 
 .burguer-button {
