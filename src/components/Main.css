@@ -61,3 +61,10 @@ main {
         font-size: .9em;
     }
 }
+
+@media  (max-width:850px ) {
+    main {
+        height: 65vh;
+        margin-bottom: 30px
+    }
+}

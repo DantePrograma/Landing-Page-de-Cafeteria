@@ -130,3 +130,9 @@
   .cart-clear-container p {
     font-family: 'Rubik', sans-serif;
   }
+
+  @media (max-width: 850px) {
+    .cart {
+      width: 230px;
+    }
+  }

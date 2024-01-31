@@ -36,7 +36,7 @@ export const products = [
     {
         "id": 5,
         "title": "Cafe Portugues",
-        "description": "Descubre Portugal en cada sorbo con nuestro Café Premium: auténtico, tostado a la perfección y lleno de sabor lisboeta.",
+        "description": "Descubre Portugal en cada sorbo con nuestro Café Premium: auténtico y tostado a la perfección.",
         "price": 8.999,
         "imagen": cafePortugues
     }

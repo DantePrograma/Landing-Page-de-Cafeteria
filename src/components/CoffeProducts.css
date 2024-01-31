@@ -9,10 +9,15 @@
 .coffe-products-container {
     width: 85%;
     height: 100%;
-    margin: 0 auto;
+    margin: 30px auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
     gap: 40px;
+    @media (max-width: 700px) {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 
 .product {
@@ -22,10 +27,14 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     font-family: 'Roboto', sans-serif;
-    height: 400px;
+    min-height: 500px;
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
+    @media (max-width: 500px) {
+        grid-template-columns: none;
+        grid-template-rows: 1fr 1fr;
+    }
 }
 
 .left-img-product {
@@ -41,12 +50,12 @@
 .right-content-product {
     margin: auto;
     width: 80%;
-    height: 50%;
+    height: 100%;
     text-align: center;
-    gap: 20px;
     display: flex;
     align-items: center;
     flex-direction: column;
+    gap: 20px;
     justify-content: space-around;
     padding: 15px;
 }

@@ -57,6 +57,10 @@ const NavBar = styled.header`
     -moz-box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
     box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
     padding: 0px 20px;
+    @media(max-width: 850px) {
+        height: 60px;
+        padding: 0px 8px;
+    }
 
 
 .nav-list {
@@ -71,7 +75,7 @@ const NavBar = styled.header`
 }
 
 .nav-list.active {
-    width: 300px;
+    width: 180px;
     height: 100%;
     padding: 70px;
     display: flex;
@@ -129,9 +133,13 @@ const NavBar = styled.header`
     color: var(--color2);
 }
 
-.nav-list img {
-  width: 110px;
-  height: 110px;
+.logo img {
+    width: 100px;
+    height: 100px;
+    @media (max-width: 850px) {
+    width: 70px;
+    height: 70px;
+  }
 }
 
 .burguer-button {
