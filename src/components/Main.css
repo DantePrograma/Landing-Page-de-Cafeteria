@@ -1,8 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto&display=swap');
 
 main {
-    height: calc(100vh - 90px);
+    height: 450px;
     width: 100%;
+    max-width: 1400px;
+    margin: auto;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
@@ -21,30 +23,34 @@ main {
 .info-merienda {
     height: 100%;
     width: 100%;
-    background-color: var(--color2);
-    color: var(--color4);
-    display: grid;
-    place-items: center;
+    background-color: var(--color3);
+    color: #fff;
+    font-family: 'Bebas Neue', sans-serif;
 }
 
 .info {
     width: 80%;
-    height: 80%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 35px;
+    margin: auto;
 }
 
 .info-merienda h1 {
-    font-size: 5.5em;
+    font-size: 60px;
     text-align: center;
+    line-height: 60px;
+    letter-spacing: 3.5px;
+
 
 }
 
 .info-merienda p {
-    font-size: 1.8em;
+    font-size: 1.4em;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -58,7 +64,7 @@ main {
     }
     
     .info-merienda p {
-        font-size: .9em;
+        font-size: 1em;
     }
 }
 

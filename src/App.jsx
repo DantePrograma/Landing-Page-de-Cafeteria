@@ -22,7 +22,6 @@ function App() {
     <CartProvider>
     <Header clicked={clicked} handleClick={handleClick} />
     <Main />
-    <CoffeProducts products={products} />
     </CartProvider>
   )
 }

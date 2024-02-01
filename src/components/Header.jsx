@@ -1,95 +1,92 @@
-import { useState } from 'react'
-import { Cart } from './Cart'
-import { HamburguerMenu } from './HamburguerMenu'
-import styled from 'styled-components'
-import logo from '/src/imagenes/lamaquina.svg'
+import { Cart } from "./Cart";
+import { HamburguerMenu } from "./HamburguerMenu";
+import styled from "styled-components";
+import logo from "/src/imagenes/lamaquina.svg";
+import { Login } from "./Login";
 
-export function Header ( {clicked, handleClick }) {
-    
+export function Header({ clicked, handleClick }) {
+  return (
+    <>
+      <NavBar>
+        <div className="header-container">
+          <div className="burguer-button">
+            <HamburguerMenu clicked={clicked} handleClick={handleClick} />
+          </div>
+          <div className="logo">
+            ZE
+            <img src={logo} alt="icono-empresa" />
+            US
+          </div>
 
-    
-    return (
-        <>
-        <NavBar>
-            <div className="header-container">
-        <div className="burguer-button">
-                        <HamburguerMenu clicked={clicked} handleClick={handleClick} />
-        </div>
-        <div className="logo">
-                        ZE
-                        <img src={logo} alt="icono-empresa" />
-                        US
-                    </div>
-        
-        <nav className={`nav-list ${clicked ? 'active' : ''}`}>
-                    <a onClick={handleClick} href="#">NOSOTROS</a>
-                    <a onClick={handleClick} href="#coffe-products">PRODUCTOS</a>
-                    
-                    <a onClick={handleClick} href="#">CAFE</a>
-                    <a onClick={handleClick} href="#">OPINIONES</a>
-                    
-                    <div>
-                    </div>
-                    
-            </nav>
-            <div className="nashe">
-            <div >
-                <i className="bi bi-person"></i>
+          <nav className={`nav-list ${clicked ? "active" : ""}`}>
+            <a onClick={handleClick} href="#">
+              NOSOTROS
+            </a>
+            <a onClick={handleClick} href="#coffe-products">
+              PRODUCTOS
+            </a>
+
+            <a onClick={handleClick} href="#">
+              CAFE
+            </a>
+            <a onClick={handleClick} href="#">
+              OPINIONES
+            </a>
+          </nav>
+          <div className="right-menu">
+            <div>
+                <Login />
             </div>
             <Cart handleClick={handleClick} />
-            </div>
-            </div>
-            
-        </NavBar>
-
-
-
-        </>
-    )
+          </div>
+        </div>
+      </NavBar>
+    </>
+  );
 }
 
 const NavBar = styled.header`
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&family=Roboto&display=swap');
-    background-color: white;
-    width: 100%;
-    margin: 0 auto;
-    height: 90px;
-    -webkit-box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
-    -moz-box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
-    box-shadow: 0px 10px 18px -6px rgba(0,0,0,0.41);
-    padding: 0px 20px;
-    @media(max-width: 850px) {
-        height: 60px;
-        padding: 0px 8px;
-    }
+  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&family=Roboto&display=swap");
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  height: 90px;
+  -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
+  -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
+  padding: 0px 20px;
+  @media (max-width: 850px) {
+    height: 60px;
+    padding: 0px 8px;
+  }
 
-.header-container {
+  .header-container {
     width: 100%;
+    max-width: 1500px;
     height: 100%;
     margin: auto;
     display: flex;
-    
+    align-items: center;
     justify-content: space-between;
-}
+  }
 
-.nashe {
+  .right-menu {
     display: flex;
     align-items: center;
     gap: 10px;
-}
+  }
 
-.nav-list {
+  .nav-list {
     display: none;
-    @media(min-width: 850px) {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    @media (min-width: 850px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 30px;
     }
+  }
 
-
-}
-
-.nav-list.active {
+  .nav-list.active {
     width: 180px;
     height: 100%;
     padding: 70px;
@@ -103,21 +100,20 @@ const NavBar = styled.header`
     bottom: 0;
     color: white;
     background-color: white;
-    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .6);
-}
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+  }
 
-.nav-list a {
+  .nav-list a {
     text-decoration: none;
     color: var(--color2);
     font-size: 19px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 600;
     position: relative;
-    margin-right: 30px;
-}
+  }
 
-.nav-list a::after {
-    content: ' ';
+  .nav-list a::after {
+    content: " ";
     position: absolute;
     left: 0;
     bottom: -32px;
@@ -127,53 +123,49 @@ const NavBar = styled.header`
     border-radius: 5px;
     transform-origin: right;
     transform: scaleX(0);
-    transition: transform .5s;
-}
+    transition: transform 0.5s;
+  }
 
-.nav-list a:hover {
+  .nav-list a:hover {
     color: var(--color3);
-}
+  }
 
-.nav-list a:hover::after {
+  .nav-list a:hover::after {
     transform-origin: left;
     transform: scaleX(1);
-} 
+  }
 
-.logo {
+  .logo {
     display: flex;
     align-items: center;
     font-size: 40px;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: "Noto Sans", sans-serif;
     font-weight: 500;
     color: var(--color2);
-    margin-right: 30px;
-}
+  }
 
-.logo img {
+  .logo img {
     width: 100px;
     height: 100px;
     @media (max-width: 850px) {
-    width: 70px;
-    height: 70px;
+      width: 70px;
+      height: 70px;
+    }
   }
-}
 
-.burguer-button {
+  .burguer-button {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+  }
 
-.bi-person {
+  .bi-person {
     font-size: 24px;
-}
+  }
 
-.burguer-button {
+  .burguer-button {
     @media (min-width: 850px) {
-        display: none;
-        border: 1px solid blue;
+      display: none;
     }
-}
-
-
-`
+  }
+`;
