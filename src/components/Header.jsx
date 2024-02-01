@@ -107,7 +107,7 @@ const NavBar = styled.header`
     text-decoration: none;
     color: var(--color2);
     font-size: 19px;
-    font-family: "Roboto", sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-weight: 600;
     position: relative;
   }

@@ -9,7 +9,7 @@
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
     display: none;
     z-index: 9999;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     
     @media (max-width: 500px) {
         overflow-y: scroll;
@@ -109,6 +109,7 @@
     font-size: 1.3em;
     color: var(--color4);
     border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+    padding-bottom: 20px;
 }
 
 .login-with {

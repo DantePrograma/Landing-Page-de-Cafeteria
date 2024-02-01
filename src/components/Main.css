@@ -25,7 +25,7 @@ main {
     width: 100%;
     background-color: var(--color3);
     color: #fff;
-    font-family: 'Bebas Neue', sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
 }
 
 .info {
@@ -41,10 +41,6 @@ main {
 .info-merienda h1 {
     font-size: 60px;
     text-align: center;
-    line-height: 60px;
-    letter-spacing: 3.5px;
-
-
 }
 
 .info-merienda p {
@@ -70,7 +66,7 @@ main {
 
 @media  (max-width:850px ) {
     main {
-        height: 65vh;
+        height: 75vh;
         margin-bottom: 30px
     }
 }

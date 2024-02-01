@@ -1,4 +1,4 @@
-import { useId, f } from "react";
+import { useId } from "react";
 import "./Cart.css";
 import { useCart } from "../hooks/useCart";
 
