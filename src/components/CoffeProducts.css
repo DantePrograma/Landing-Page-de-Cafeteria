@@ -31,10 +31,11 @@
     -webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     -moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
     box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
-    @media (max-width: 500px) {
+    @media (max-width: 700px) {
         grid-template-columns: none;
         grid-template-rows: 1fr 1fr;
     }
+    
 }
 
 .left-img-product {

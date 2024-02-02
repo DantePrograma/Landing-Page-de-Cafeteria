@@ -50,7 +50,7 @@ export const products = [
   },
 ];
 
-export const SecionProductos = [
+export const SeccionProductos = [
   {
     id: 6,
     title: "BEBIDAS",
