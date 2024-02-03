@@ -1,32 +1,26 @@
-import './App.css'
-import { Header } from './components/Header'
-import { Main } from './components/Main'
-import { CoffeProducts } from './components/CoffeProducts'
-import { CartProvider } from './context/cart'
-import { SeccionProductos, products } from './data/Products.js'
-import { useState } from 'react'
-import { Productos } from './components/Productos.jsx'
-
-
+import "./App.css";
+import { Header } from "./components/Header";
+import { Main } from "./components/Main";
+import { CoffeProducts } from "./components/Screens/CoffeProducts.jsx";
+import { CartProvider } from "./context/cart";
+import { SeccionProductos, products } from "./data/Products.js";
+import { Productos } from "./components/Screens/Productos.jsx";
+import { Route, BrowserRouter, Routes} from "react-router-dom";
 
 function App() {
-  const [clicked, setClicked] = useState(false)
-
-    const handleClick = () => {
-        const isMobile = window.innerWidth <= 850;
-        if (isMobile) {
-            setClicked(!clicked);
-        }
-    }
- 
   return (
+    <BrowserRouter>
     <CartProvider>
-    <Header clicked={clicked} handleClick={handleClick} />
-    <Main />
-    <CoffeProducts products={products} />
-    <Productos props={SeccionProductos} />
+      <Header/>
+
+
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="products" element={<CoffeProducts products={products} />} />
+      </Routes>
     </CartProvider>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

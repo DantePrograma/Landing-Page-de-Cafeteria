@@ -13,6 +13,7 @@ function CartItem({ imagen, title, quantity, price, addToCart }) {
               CANTIDAD: <strong>{quantity}</strong>
             </p>
             <button className="quantity-button" onClick={addToCart}>+</button>
+            <p>{title} </p>
           </div>
           <strong>${price} ARS</strong>
         </div>

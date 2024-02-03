@@ -1,4 +1,4 @@
-import { useCart } from '../hooks/useCart'
+import { useCart } from '../../hooks/useCart'
 import './CoffeProducts.css'
 
 export function CoffeProducts ( {products} ) {

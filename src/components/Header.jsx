@@ -3,8 +3,18 @@ import { HamburguerMenu } from "./HamburguerMenu";
 import styled from "styled-components";
 import logo from "/src/imagenes/lamaquina.svg";
 import { Login } from "./Login";
+import { Link } from "react-router-dom";
+import { useState } from "react";
 
-export function Header({ clicked, handleClick }) {
+export function Header() {
+  const [clicked, setClicked] = useState(false);
+
+  const handleClick = () => {
+    const isMobile = window.innerWidth <= 850;
+    if (isMobile) {
+      setClicked(!clicked);
+    }
+  };
   return (
     <>
       <NavBar>
@@ -19,12 +29,12 @@ export function Header({ clicked, handleClick }) {
           </div>
 
           <nav className={`nav-list ${clicked ? "active" : ""}`}>
-            <a onClick={handleClick} href="#">
-              NOSOTROS
-            </a>
-            <a onClick={handleClick} href="#coffe-products">
+            <Link onClick={handleClick} to={"/"}>
+              INICIO
+            </Link>
+            <Link onClick={handleClick} to={"products"}>
               PRODUCTOS
-            </a>
+            </Link>
 
             <a onClick={handleClick} href="#">
               CAFE
@@ -35,7 +45,7 @@ export function Header({ clicked, handleClick }) {
           </nav>
           <div className="right-menu">
             <div>
-                <Login />
+              <Login />
             </div>
             <Cart handleClick={handleClick} />
           </div>
@@ -107,7 +117,8 @@ const NavBar = styled.header`
     text-decoration: none;
     color: var(--color2);
     font-size: 19px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
     font-weight: 600;
     position: relative;
   }
