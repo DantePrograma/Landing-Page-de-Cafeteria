@@ -2,20 +2,33 @@ import { useId } from "react";
 import "./Cart.css";
 import { useCart } from "../hooks/useCart";
 
-function CartItem({ imagen, title, quantity, price, addToCart }) {
+function CartItem({
+  imagen,
+  title,
+  quantity,
+  price,
+  addToCart,
+  removeFromCart,
+}) {
   return (
     <>
       <li>
         <img src={imagen} alt={title} />
         <div className="quantity-section">
-          <div className="quantity">
-            <p>
-              CANTIDAD: <strong>{quantity}</strong>
-            </p>
-            <button className="quantity-button" onClick={addToCart}>+</button>
-            <p>{title} </p>
+          <div className="h1-remove-from-cart">
+            <h1>{title}</h1>
+            <i onClick={() => removeFromCart()} class="bi bi-cart-dash"></i>
           </div>
-          <strong>${price} ARS</strong>
+          <div className="quantity">
+            <div className="right-quantity">
+              <button onClick={() => removeFromCart()}>-</button>
+              <p>{quantity}</p>
+              <button onClick={() => addToCart()}>+</button>
+            </div>
+            <div className="left-quantity">
+              <strong>${price}</strong>
+            </div>
+          </div>
         </div>
       </li>
     </>
@@ -24,7 +37,7 @@ function CartItem({ imagen, title, quantity, price, addToCart }) {
 
 export function Cart() {
   const cartCheckBoxId = useId();
-  const { cart, clearCart, addToCart, cartVacio } = useCart();
+  const { cart, clearCart, addToCart, cartVacio, removeFromCart } = useCart();
 
   return (
     <>
@@ -48,6 +61,7 @@ export function Cart() {
             <CartItem
               key={product.id}
               addToCart={() => addToCart(product)}
+              removeFromCart={() => removeFromCart(product)}
               {...product}
             />
           ))}

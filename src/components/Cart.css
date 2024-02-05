@@ -1,23 +1,22 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
 
 .cart {
-  background: #fff;
+  background-color: #f7f7f7;
   position: fixed;
   padding: 5px 0;
   top: 0;
   right: 0px;
   height: 100%;
   width: 100%;
+  clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   max-width: 700px;
-  color: var(--color2);
   text-align: center;
   overflow: scroll;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  transition: all 0.4s;
-  display: none;
-  box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+  transition: all 0.4s linear;
+  font-family: "Poppins", sans-serif;
 }
 
 .cart img {
@@ -31,44 +30,66 @@
 }
 
 .cart li {
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: auto;
+  height: 150px;
+  margin-bottom: 10px;
+}
+
+.cart li img {
+  height: 100%;
 }
 
 .quantity-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: "Poppins", sans-serif;
+  padding: 10px;
+}
+
+.h1-remove-from-cart {
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  font-family: "Rubik", sans-serif;
-  margin: 10px 0;
+  justify-content: space-between;
 }
 
-.quantity-section strong {
-  font-size: 1.3em;
+.h1-remove-from-cart h1 {
+  font-size: 1.7rem;
+  font-weight: 600;
 }
 
-.quantity-section p {
-  font-size: 1.3em;
+.h1-remove-from-cart i {
+  font-size: 24px;
 }
 
 .quantity {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+}
+
+.right-quantity {
+  display: flex;
   gap: 10px;
 }
 
-.quantity strong {
-  font-size: 1em;
+.right-quantity p {
+  padding: 5px 15px;
+  border: 1px solid gray;
+  background-color: #fff;
 }
-.quantity button {
-  cursor: pointer;
-  font-size: 20px;
-  border: 1px solid black;
+
+.right-quantity button {
+  font-size: 1.5rem;
+  border: none;
+  background-color: transparent;
+}
+
+.left-quantity strong {
+  font-size: 1.2rem;
 }
 
 .cart-button {
@@ -76,10 +97,8 @@
   cursor: pointer;
   display: flex;
   align-items: center;
-  height: 32px;
   justify-content: center;
   transition: all 0.3s ease;
-  width: 32px;
 }
 
 .cart-button:hover {
@@ -87,28 +106,7 @@
 }
 
 .cart-button ~ input:checked ~ .cart {
-  display: block;
-}
-
-.quantity-button {
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px 5px 10px;
-}
-
-.bi-cart-fill {
-  font-size: 24px;
-  color: var(--color2);
-}
-
-.cart-clear-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.cart-clear-container p {
-  font-family: "Rubik", sans-serif;
+  clip-path: polygon(100% 0, 0 0, 0 100%, 100% 100%);
 }
 
 .title-close-cart {
@@ -116,7 +114,6 @@
   align-items: center;
   justify-content: space-between;
   padding: 20px;
-  margin-bottom: 15px;
   border-bottom: 0.5px solid rgba(0, 0, 0, 0.105);
 }
 
@@ -143,20 +140,7 @@
   color: black;
 }
 
-.cart-vacio {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.cart-vacio i {
-  font-size: 120px;
-  color: rgba(0, 0, 0, 0.105);
-}
-
-.cart-vacio p {
-  color: #000;
-  font-size: 1.1em;
-  font-weight: 500;
-  font-family: "Roboto", sans-serif;
+.bi-cart-fill {
+  font-size: 24px;
+  color: var(--color1);
 }

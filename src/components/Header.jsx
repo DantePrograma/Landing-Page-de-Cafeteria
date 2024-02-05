@@ -10,7 +10,7 @@ export function Header() {
   const [clicked, setClicked] = useState(false);
 
   const handleClick = () => {
-    const isMobile = window.innerWidth <= 850;
+    const isMobile = window.innerWidth <= 768;
     if (isMobile) {
       setClicked(!clicked);
     }
@@ -22,31 +22,27 @@ export function Header() {
           <div className="burguer-button">
             <HamburguerMenu clicked={clicked} handleClick={handleClick} />
           </div>
-          <div className="logo">
-            ZE
-            <img src={logo} alt="icono-empresa" />
-            US
-          </div>
-
-          <nav className={`nav-list ${clicked ? "active" : ""}`}>
-            <Link onClick={handleClick} to={"/"}>
-              INICIO
-            </Link>
-            <Link onClick={handleClick} to={"products"}>
-              PRODUCTOS
-            </Link>
-
-            <a onClick={handleClick} href="#">
-              CAFE
-            </a>
-            <a onClick={handleClick} href="#">
-              OPINIONES
-            </a>
-          </nav>
-          <div className="right-menu">
-            <div>
-              <Login />
+          <div className="left-menu">
+            <div className="logo">
+              <Link onClick={handleClick} to={"/"}>
+                <img className="logo-img" src={logo} alt="icono-empresa" />
+              </Link>
             </div>
+
+            <nav className={`nav-list ${clicked ? "active" : ""}`}>
+              <Link onClick={handleClick} to={"products"}>
+                PRODUCTOS
+              </Link>
+              <Link onClick={handleClick} to={"/"}>
+                NOSOTROS
+              </Link>
+              <Link onClick={handleClick} to={"products"}>
+                CAFE
+              </Link>
+            </nav>
+          </div>
+          <div className="right-menu">
+            <Login />
             <Cart handleClick={handleClick} />
           </div>
         </div>
@@ -56,7 +52,6 @@ export function Header() {
 }
 
 const NavBar = styled.header`
-  @import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Rubik&family=Roboto&display=swap");
   background-color: white;
   width: 100%;
   margin: 0 auto;
@@ -64,10 +59,12 @@ const NavBar = styled.header`
   -webkit-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
   -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
-  padding: 0px 20px;
-  @media (max-width: 850px) {
-    height: 60px;
-    padding: 0px 8px;
+  @media (max-width: 768px) {
+    height: 80px;
+  }
+
+  @media (max-width: 1500px) {
+    padding: 0 10px;
   }
 
   .header-container {
@@ -83,12 +80,19 @@ const NavBar = styled.header`
   .right-menu {
     display: flex;
     align-items: center;
+    justify-content: flex-end;
     gap: 10px;
+  }
+
+  .left-menu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
   .nav-list {
     display: none;
-    @media (min-width: 850px) {
+    @media (min-width: 768px) {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -115,11 +119,11 @@ const NavBar = styled.header`
 
   .nav-list a {
     text-decoration: none;
-    color: var(--color2);
-    font-size: 19px;
-    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-      "Lucida Sans", Arial, sans-serif;
+    color: #000;
+    font-size: 1rem;
+    font-family: "Open Sans", sans-serif;
     font-weight: 600;
+    letter-spacing: 1px;
     position: relative;
   }
 
@@ -147,21 +151,26 @@ const NavBar = styled.header`
   }
 
   .logo {
+    height: 110px;
+    width: 110px;
     display: flex;
     align-items: center;
-    font-size: 40px;
-    font-family: "Noto Sans", sans-serif;
-    font-weight: 500;
-    color: var(--color2);
+    @media (max-width: 768px) {
+      margin-left: 35px;
+    }
   }
 
-  .logo img {
-    width: 100px;
-    height: 100px;
-    @media (max-width: 850px) {
-      width: 70px;
-      height: 70px;
+  .logo a {
+    display: flex;
+    align-items: center;
+    @media (max-width: 768px) {
+      padding: 4px;
     }
+  }
+
+  .logo-img {
+    height: 100%;
+    width: 100%;
   }
 
   .burguer-button {
@@ -172,10 +181,16 @@ const NavBar = styled.header`
 
   .bi-person {
     font-size: 24px;
+    color: #000;
+  }
+
+  .bi-person:hover {
+    color: var(--color3);
+    transition: all 0.3s linear;
   }
 
   .burguer-button {
-    @media (min-width: 850px) {
+    @media (min-width: 768px) {
       display: none;
     }
   }
