@@ -29,7 +29,7 @@ export function Header() {
               </Link>
             </div>
 
-            <nav className={`nav-list ${clicked ? "active" : ""}`}>
+            <nav className={`nav-list ${clicked ? "mobile" : ""}`}>
               <Link onClick={handleClick} to={"products"}>
                 PRODUCTOS
               </Link>
@@ -39,8 +39,12 @@ export function Header() {
               <Link onClick={handleClick} to={"products"}>
                 CAFE
               </Link>
+              <button onClick={handleClick} className="menu-close">
+                <i className="bi bi-x-lg"></i>
+              </button>
             </nav>
           </div>
+
           <div className="right-menu">
             <Login />
             <Cart handleClick={handleClick} />
@@ -60,7 +64,7 @@ const NavBar = styled.header`
   -moz-box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
   @media (max-width: 768px) {
-    height: 80px;
+    height: 70px;
   }
 
   @media (max-width: 1500px) {
@@ -69,7 +73,7 @@ const NavBar = styled.header`
 
   .header-container {
     width: 100%;
-    max-width: 1500px;
+    max-width: 1400px;
     height: 100%;
     margin: auto;
     display: flex;
@@ -94,27 +98,39 @@ const NavBar = styled.header`
     display: none;
     @media (min-width: 768px) {
       display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 30px;
+      gap: 25px;
     }
   }
 
-  .nav-list.active {
-    width: 180px;
+  .mobile {
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
     height: 100%;
-    padding: 70px;
     display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 50px;
+    padding: 20px;
     position: fixed;
     top: 0;
     left: 0;
     bottom: 0;
-    color: white;
     background-color: white;
     box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.6);
+  }
+
+  .menu-close {
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    font-size: 2em;
+    background-color: transparent;
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 
   .nav-list a {
@@ -128,17 +144,19 @@ const NavBar = styled.header`
   }
 
   .nav-list a::after {
-    content: " ";
-    position: absolute;
-    left: 0;
-    bottom: -32px;
-    width: 100%;
-    height: 5px;
-    background: var(--color3);
-    border-radius: 5px;
-    transform-origin: right;
-    transform: scaleX(0);
-    transition: transform 0.5s;
+    @media (min-width: 768px) {
+      content: " ";
+      position: absolute;
+      left: 0;
+      bottom: -32px;
+      width: 100%;
+      height: 5px;
+      background: var(--color3);
+      border-radius: 5px;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform 0.5s;
+    }
   }
 
   .nav-list a:hover {
@@ -157,6 +175,11 @@ const NavBar = styled.header`
     align-items: center;
     @media (max-width: 768px) {
       margin-left: 35px;
+      height: 90px;
+      width: 90px;
+    }
+    @media (min-width: 1500px) {
+      margin-left: -38px;
     }
   }
 

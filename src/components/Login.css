@@ -7,7 +7,7 @@
   clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
   max-width: 380px;
   background-color: #ffffff;
-  transition: all 0.4s linear;
+  transition: all 0.3s linear;
   z-index: 9999;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;

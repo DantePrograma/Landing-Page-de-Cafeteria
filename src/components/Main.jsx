@@ -20,7 +20,6 @@ export function Main() {
           </div>
         </div>
       </main>
-      <Productos props={SeccionProductos} />
     </>
   );
 }

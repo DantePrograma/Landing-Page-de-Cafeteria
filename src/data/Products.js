@@ -47,28 +47,15 @@ export const products = [
 
 export const SeccionProductos = [
   {
-    id: 6,
-    title: "BEBIDAS",
-    imagen: Bebidas,
-  },
-  {
     id: 7,
     title: "PRODUCTOS",
     imagen: Productos,
+    link: "products",
   },
   {
     id: 8,
     title: "MENU",
     imagen: Menu,
-  },
-  {
-    id: 9,
-    title: "MENU",
-    imagen: Menu,
-  },
-  {
-    id: 10,
-    title: "MENU",
-    imagen: Menu,
+    link: "products",
   },
 ];

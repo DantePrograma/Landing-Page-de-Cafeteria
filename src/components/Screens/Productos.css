@@ -1,37 +1,42 @@
 .productos-section {
-    margin-top: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .productos-section ul {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
-    width: 80%;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px auto;
+}
+
+.productos-section ul a {
+  text-decoration: none;
+  color: var(--color1);
 }
 
 .productos-section ul li {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    border-radius: 3px;
-    overflow: hidden;
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 3px;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
 }
 
 .productos-section ul li img {
-    width: 200px;
-    height: 200px;
+  width: 200px;
+  height: 200px;
 }
 
 .productos-section ul li p {
-    font-weight: 100;
-    font-size: 1.6em;
-    text-align: center;
+  font-weight: 100;
+  font-size: 1.6em;
+  text-align: center;
 }
