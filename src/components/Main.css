@@ -1,69 +1,49 @@
 main {
   height: 100vh;
   width: 100%;
-  margin: auto;
-  display: grid;
-  grid-template-columns: 1.5fr 1fr;
-}
-
-.img-left {
-  height: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.img-left img {
-  height: 100%;
-  width: 100%;
+  background-image: url("/src/imagenes/fondomain.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  margin-bottom: 60px;
 }
 
 .info-merienda {
-  height: 100%;
-  width: 100%;
-  background-color: var(--color3);
-  color: #fff;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
-    "Lucida Sans", Arial, sans-serif;
-}
-
-.info {
+  margin: auto;
   width: 80%;
   height: 100%;
   display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.info {
+  margin-left: -50px;
+  width: 50%;
+  display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 35px;
+  gap: 50px;
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-left: 0px;
+  }
+}
+
+.info h1 {
+  line-height: 4rem;
+  font-size: 4.7rem;
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "SoDo Sans SemiBold", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+}
+
+.info p {
+  font-size: 1.45rem;
+  text-align: center;
+  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  max-width: 550px;
   margin: auto;
-}
-
-.info-merienda h1 {
-  font-size: 4.5rem;
-  text-align: center;
-}
-
-.info-merienda p {
-  font-size: 1.7em;
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-}
-
-@media (max-width: 900px) {
-  main {
-    grid-template-columns: none;
-    grid-template-rows: 1fr 1fr;
-  }
-  .info-merienda h1 {
-    font-size: 2.5em;
-  }
-
-  .info-merienda p {
-    font-size: 1em;
-  }
-}
-
-@media (max-width: 850px) {
-  main {
-    height: 75vh;
-    margin-bottom: 30px;
-  }
 }

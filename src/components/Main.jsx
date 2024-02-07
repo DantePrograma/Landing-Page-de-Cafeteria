@@ -1,25 +1,21 @@
 import "./Main.css";
-import { Productos } from "./Screens/Productos";
-import merienda from "/src/imagenes/tazadecafenuevo.jpeg";
-import { SeccionProductos } from "../data/Products";
+import { ProductosDestacados } from "./ProductosDestacados";
 
 export function Main() {
   return (
     <>
       <main>
-        <div className="img-left">
-          <img src={merienda} alt="taza de cafe imagen" />
-        </div>
         <div className="info-merienda">
           <div className="info">
-            <h1>¡Proba nuestra nueva merieda!</h1>
+            <h1>Empeza el dia con un buen cafe!</h1>
             <p>
-              Sumérjanse en la indulgencia de nuestro cappuccino artesanal,
-              junto con dos exquisitas medialunas.
+              "Descubre el placer del mejor café en <i>Zeus Coffee</i>. Empieza
+              tu día con nosotros."
             </p>
           </div>
         </div>
       </main>
+      <ProductosDestacados />
     </>
   );
 }

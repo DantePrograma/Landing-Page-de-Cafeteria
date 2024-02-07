@@ -136,9 +136,9 @@ const NavBar = styled.header`
   .nav-list a {
     text-decoration: none;
     color: #000;
-    font-size: 1rem;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
+    font-size: 1.01rem;
+    font-family: "SoDo Sans SemiBold", Helvetica, Arial, sans-serif;
+    font-weight: 400;
     letter-spacing: 1px;
     position: relative;
   }
@@ -174,7 +174,7 @@ const NavBar = styled.header`
     display: flex;
     align-items: center;
     @media (max-width: 768px) {
-      margin-left: 35px;
+      margin-left: 20px;
       height: 90px;
       width: 90px;
     }

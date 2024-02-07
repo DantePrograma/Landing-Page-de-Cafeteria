@@ -1,11 +1,10 @@
-import cafeArgentino from "/src/imagenes/cafedeargentina.jpeg";
-import cafeColombino from "/src/imagenes/cafedecolombia.jpeg";
-import cafeItaliano from "/src/imagenes/cafedeitalia.jpeg";
-import cafeFrances from "/src/imagenes/cafedefrancia.jpeg";
-import cafePortugues from "/src/imagenes/cafeportugues.jpeg";
-import Bebidas from "/src/imagenes/bebidas.jpeg";
-import Productos from "/src/imagenes/cafes.jpeg";
-import Menu from "/src/imagenes/meriendas.jpeg";
+import cafeArgentino from "/src/imagenes/cafedeargentina.jpg";
+import cafeColombino from "/src/imagenes/cafedecolombia.jpg";
+import cafeItaliano from "/src/imagenes/cafedeitalia.jpg";
+import cafeFrances from "/src/imagenes/cafedefrancia.jpg";
+import cafePortugues from "/src/imagenes/cafeportugues.jpg";
+import Productos from "/src/imagenes/cafes.jpg";
+import Menu from "/src/imagenes/meriendas.jpg";
 
 export const products = [
   {
@@ -25,7 +24,7 @@ export const products = [
   {
     id: 3,
     title: "Cafe Italiano",
-    description: "Explora la esencia del café italiano con nuestroproducto.",
+    description: "Explora la esencia del café italiano con nuestro producto.",
     price: 8.999,
     imagen: cafeItaliano,
   },
