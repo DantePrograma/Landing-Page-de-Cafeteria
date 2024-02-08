@@ -25,7 +25,8 @@
   align-items: center;
   border-radius: 4px;
   overflow: hidden;
-  font-family: "SoDo Sans SemiBold", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
+  background-color: #fff;
 }
 
 .left-img-product {
@@ -38,9 +39,9 @@
 }
 
 .right-content-product {
+  padding: 5px;
   width: 100%;
   text-align: start;
-  padding-bottom: 10px;
   display: flex;
   flex-direction: column;
 }
@@ -67,4 +68,5 @@
   border-radius: 2px;
   font-size: 1rem;
   color: #fff;
+  width: 100%;
 }

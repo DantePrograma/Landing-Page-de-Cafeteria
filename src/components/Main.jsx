@@ -1,5 +1,5 @@
 import "./Main.css";
-import { ProductosDestacados } from "./ProductosDestacados";
+import { SobreNosotros } from "./SobreNosotros";
 
 export function Main() {
   return (
@@ -15,7 +15,7 @@ export function Main() {
           </div>
         </div>
       </main>
-      <ProductosDestacados />
+      <SobreNosotros />
     </>
   );
 }

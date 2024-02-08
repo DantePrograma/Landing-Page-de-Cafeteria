@@ -1,4 +1,5 @@
 import "./App.css";
+import Footer from "./components/Footer.jsx";
 import { Header } from "./components/Header";
 import { Main } from "./components/Main";
 import { CoffeProducts } from "./components/Screens/CoffeProducts.jsx";
@@ -19,6 +20,7 @@ function App() {
             element={<CoffeProducts products={products} />}
           />
         </Routes>
+        <Footer />
       </CartProvider>
     </BrowserRouter>
   );

@@ -6,7 +6,6 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   color: #fff;
-  margin-bottom: 60px;
 }
 
 .info-merienda {
@@ -24,25 +23,25 @@ main {
   display: flex;
   flex-direction: column;
   gap: 50px;
+  text-align: center;
   @media (max-width: 768px) {
     width: 100%;
     margin-left: 0px;
+    text-align: left;
   }
 }
 
 .info h1 {
   line-height: 4rem;
   font-size: 4.7rem;
-  text-align: center;
   text-transform: uppercase;
-  font-family: "SoDo Sans SemiBold", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 700;
 }
 
 .info p {
   font-size: 1.45rem;
-  text-align: center;
-  font-family: "Roboto", Helvetica, Arial, sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
   max-width: 550px;
   margin: auto;

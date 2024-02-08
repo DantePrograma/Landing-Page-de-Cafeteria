@@ -33,9 +33,9 @@ export function Header() {
               <Link onClick={handleClick} to={"products"}>
                 PRODUCTOS
               </Link>
-              <Link onClick={handleClick} to={"/"}>
+              <a onClick={handleClick} href="#nosotros">
                 NOSOTROS
-              </Link>
+              </a>
               <Link onClick={handleClick} to={"products"}>
                 CAFE
               </Link>
@@ -65,20 +65,19 @@ const NavBar = styled.header`
   box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.54);
   @media (max-width: 768px) {
     height: 70px;
-  }
-
-  @media (max-width: 1500px) {
     padding: 0 10px;
   }
 
   .header-container {
     width: 100%;
-    max-width: 1400px;
     height: 100%;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (min-width: 768px) {
+      padding: 0px 15px;
+    }
   }
 
   .right-menu {
@@ -137,8 +136,8 @@ const NavBar = styled.header`
     text-decoration: none;
     color: #000;
     font-size: 1.01rem;
-    font-family: "SoDo Sans SemiBold", Helvetica, Arial, sans-serif;
-    font-weight: 400;
+    font-family: "Lato", sans-serif;
+    font-weight: 700;
     letter-spacing: 1px;
     position: relative;
   }
@@ -177,9 +176,6 @@ const NavBar = styled.header`
       margin-left: 20px;
       height: 90px;
       width: 90px;
-    }
-    @media (min-width: 1500px) {
-      margin-left: -38px;
     }
   }
 

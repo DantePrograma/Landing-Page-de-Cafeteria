@@ -22,19 +22,15 @@ export function CoffeProducts({ products }) {
                 <h1>{product.title}</h1>
                 <p>{product.description}</p>
                 <strong>${product.price}</strong>
-                <button
-                  className="button-add-to-cart"
-                  onClick={() => {
-                    isProducInCart
-                      ? removeFromCart(product)
-                      : addToCart(product);
-                  }}
-                >
-                  {isProducInCart
-                    ? "REMOVER DEL CARRITO"
-                    : "AGREGAR AL CARRITO"}
-                </button>
               </div>
+              <button
+                className="button-add-to-cart"
+                onClick={() => {
+                  isProducInCart ? removeFromCart(product) : addToCart(product);
+                }}
+              >
+                {isProducInCart ? "REMOVER DEL CARRITO" : "AGREGAR AL CARRITO"}
+              </button>
             </div>
           );
         })}

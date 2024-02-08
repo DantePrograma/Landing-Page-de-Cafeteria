@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,700&display=swap");
+
+footer {
+  width: 100%;
+  background-color: #fff;
+}
+
+.footer-container {
+  width: 100%;
+  margin: auto;
+  min-height: 160px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family: "Lato", sans-serif;
+  text-align: center;
+  gap: 20px;
+  padding: 20px;
+  @media (min-width: 1200px) {
+    width: 50%;
+  }
+}
+
+.tienda-container,
+.compañia-container,
+.redes-container {
+  height: 160px;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.tienda-container a,
+.compañia-container a {
+  color: #777777;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.tienda-container a:hover,
+.compañia-container a:hover {
+  color: var(--color3);
+}
+
+.redes {
+  display: flex;
+  gap: 10px;
+  font-size: 1.7rem;
+  align-items: center;
+}
+
+.redes a {
+  text-decoration: none;
+  color: #000;
+}
